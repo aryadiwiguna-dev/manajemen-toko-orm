@@ -1,3 +1,67 @@
+# Tugas BDL ORM
+
+Aplikasi Tugas Basis Data Lanjut (BDL) yang menggunakan Laravel Eloquent ORM untuk manajemen data.
+
+## Prerequisite
+
+Pastikan terinstall di local machine:
+
+-   PHP ^8.2
+-   Composer
+-   Node JS & NPM
+-   Database (MySQL)
+
+## 1. Clone Repository
+
+```bash
+git clone https://github.com/aryadiwiguna-dev/manajemen-toko-orm.git
+```
+
+## 2. Install Dependensi
+
+```bash
+composer install   # install PHP dependencies
+npm install       # install Node.js dependencies
+npm run build       # compile assets dengan Vite
+```
+
+## 3. Konfigurasi Environment
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+Edit file `.env` sesuaikan koneksi database:
+
+```dotenv
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database
+DB_USERNAME=username
+DB_PASSWORD=password
+```
+
+## 4. Migrasi dan Seed Database
+
+```bash
+php artisan migrate
+php artisan db:seed --class=ProductCategorySeeder      
+```
+
+## 5. Jalankan Server Lokal
+
+```bash
+php artisan serve
+```
+
+Akses aplikasi di `http://127.0.0.1:8000`.
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
